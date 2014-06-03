@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A91582E9193E6F5D007329EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91582E8193E6F5D007329EB /* AppDelegate.swift */; };
+		A91582EB193E6F5D007329EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91582EA193E6F5D007329EB /* ViewController.swift */; };
+		A91582EE193E6F5D007329EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91582EC193E6F5D007329EB /* Main.storyboard */; };
+		A91582F0193E6F5D007329EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91582EF193E6F5D007329EB /* Images.xcassets */; };
+		A91582FC193E6F5D007329EB /* TwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91582FB193E6F5D007329EB /* TwiftTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A91582F6193E6F5D007329EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A91582DB193E6F5D007329EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A91582E2193E6F5D007329EB;
+			remoteInfo = Twift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A91582E3193E6F5D007329EB /* Twift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A91582E7193E6F5D007329EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A91582E8193E6F5D007329EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A91582EA193E6F5D007329EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A91582ED193E6F5D007329EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A91582EF193E6F5D007329EB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A91582F5193E6F5D007329EB /* TwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A91582FA193E6F5D007329EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A91582FB193E6F5D007329EB /* TwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwiftTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A91582E0193E6F5D007329EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A91582F2193E6F5D007329EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A91582DA193E6F5D007329EB = {
+			isa = PBXGroup;
+			children = (
+				A91582E5193E6F5D007329EB /* Twift */,
+				A91582F8193E6F5D007329EB /* TwiftTests */,
+				A91582E4193E6F5D007329EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A91582E4193E6F5D007329EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A91582E3193E6F5D007329EB /* Twift.app */,
+				A91582F5193E6F5D007329EB /* TwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A91582E5193E6F5D007329EB /* Twift */ = {
+			isa = PBXGroup;
+			children = (
+				A91582E8193E6F5D007329EB /* AppDelegate.swift */,
+				A91582EA193E6F5D007329EB /* ViewController.swift */,
+				A91582EC193E6F5D007329EB /* Main.storyboard */,
+				A91582EF193E6F5D007329EB /* Images.xcassets */,
+				A91582E6193E6F5D007329EB /* Supporting Files */,
+			);
+			path = Twift;
+			sourceTree = "<group>";
+		};
+		A91582E6193E6F5D007329EB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A91582E7193E6F5D007329EB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A91582F8193E6F5D007329EB /* TwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				A91582FB193E6F5D007329EB /* TwiftTests.swift */,
+				A91582F9193E6F5D007329EB /* Supporting Files */,
+			);
+			path = TwiftTests;
+			sourceTree = "<group>";
+		};
+		A91582F9193E6F5D007329EB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A91582FA193E6F5D007329EB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A91582E2193E6F5D007329EB /* Twift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A91582FF193E6F5D007329EB /* Build configuration list for PBXNativeTarget "Twift" */;
+			buildPhases = (
+				A91582DF193E6F5D007329EB /* Sources */,
+				A91582E0193E6F5D007329EB /* Frameworks */,
+				A91582E1193E6F5D007329EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Twift;
+			productName = Twift;
+			productReference = A91582E3193E6F5D007329EB /* Twift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A91582F4193E6F5D007329EB /* TwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9158302193E6F5D007329EB /* Build configuration list for PBXNativeTarget "TwiftTests" */;
+			buildPhases = (
+				A91582F1193E6F5D007329EB /* Sources */,
+				A91582F2193E6F5D007329EB /* Frameworks */,
+				A91582F3193E6F5D007329EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A91582F7193E6F5D007329EB /* PBXTargetDependency */,
+			);
+			name = TwiftTests;
+			productName = TwiftTests;
+			productReference = A91582F5193E6F5D007329EB /* TwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A91582DB193E6F5D007329EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = 135yshr;
+				TargetAttributes = {
+					A91582E2193E6F5D007329EB = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 8G55J44ZTV;
+					};
+					A91582F4193E6F5D007329EB = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = A91582E2193E6F5D007329EB;
+					};
+				};
+			};
+			buildConfigurationList = A91582DE193E6F5D007329EB /* Build configuration list for PBXProject "Twift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A91582DA193E6F5D007329EB;
+			productRefGroup = A91582E4193E6F5D007329EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A91582E2193E6F5D007329EB /* Twift */,
+				A91582F4193E6F5D007329EB /* TwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A91582E1193E6F5D007329EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A91582EE193E6F5D007329EB /* Main.storyboard in Resources */,
+				A91582F0193E6F5D007329EB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A91582F3193E6F5D007329EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A91582DF193E6F5D007329EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A91582EB193E6F5D007329EB /* ViewController.swift in Sources */,
+				A91582E9193E6F5D007329EB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A91582F1193E6F5D007329EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A91582FC193E6F5D007329EB /* TwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A91582F7193E6F5D007329EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A91582E2193E6F5D007329EB /* Twift */;
+			targetProxy = A91582F6193E6F5D007329EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A91582EC193E6F5D007329EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A91582ED193E6F5D007329EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A91582FD193E6F5D007329EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A91582FE193E6F5D007329EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9158300193E6F5D007329EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Twift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		A9158301193E6F5D007329EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Twift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		A9158303193E6F5D007329EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Twift.app/Twift";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		A9158304193E6F5D007329EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Twift.app/Twift";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A91582DE193E6F5D007329EB /* Build configuration list for PBXProject "Twift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A91582FD193E6F5D007329EB /* Debug */,
+				A91582FE193E6F5D007329EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A91582FF193E6F5D007329EB /* Build configuration list for PBXNativeTarget "Twift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9158300193E6F5D007329EB /* Debug */,
+				A9158301193E6F5D007329EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A9158302193E6F5D007329EB /* Build configuration list for PBXNativeTarget "TwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9158303193E6F5D007329EB /* Debug */,
+				A9158304193E6F5D007329EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A91582DB193E6F5D007329EB /* Project object */;
+}
