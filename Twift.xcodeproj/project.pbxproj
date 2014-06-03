@@ -12,6 +12,8 @@
 		A91582EE193E6F5D007329EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91582EC193E6F5D007329EB /* Main.storyboard */; };
 		A91582F0193E6F5D007329EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91582EF193E6F5D007329EB /* Images.xcassets */; };
 		A91582FC193E6F5D007329EB /* TwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91582FB193E6F5D007329EB /* TwiftTests.swift */; };
+		A9158306193E75B3007329EB /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9158305193E75B3007329EB /* TimelineViewController.swift */; };
+		A9158308193E7BF7007329EB /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9158307193E7BF7007329EB /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		A91582F5193E6F5D007329EB /* TwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91582FA193E6F5D007329EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A91582FB193E6F5D007329EB /* TwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwiftTests.swift; sourceTree = "<group>"; };
+		A9158305193E75B3007329EB /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		A9158307193E7BF7007329EB /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9158308193E7BF7007329EB /* Twitter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +62,7 @@
 		A91582DA193E6F5D007329EB = {
 			isa = PBXGroup;
 			children = (
+				A9158307193E7BF7007329EB /* Twitter.framework */,
 				A91582E5193E6F5D007329EB /* Twift */,
 				A91582F8193E6F5D007329EB /* TwiftTests */,
 				A91582E4193E6F5D007329EB /* Products */,
@@ -80,6 +86,7 @@
 				A91582EC193E6F5D007329EB /* Main.storyboard */,
 				A91582EF193E6F5D007329EB /* Images.xcassets */,
 				A91582E6193E6F5D007329EB /* Supporting Files */,
+				A9158305193E75B3007329EB /* TimelineViewController.swift */,
 			);
 			path = Twift;
 			sourceTree = "<group>";
@@ -211,6 +218,7 @@
 			files = (
 				A91582EB193E6F5D007329EB /* ViewController.swift in Sources */,
 				A91582E9193E6F5D007329EB /* AppDelegate.swift in Sources */,
+				A9158306193E75B3007329EB /* TimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
