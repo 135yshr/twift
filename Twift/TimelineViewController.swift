@@ -9,7 +9,7 @@
 import UIKit
 import Twitter
 
-class TimelineViewController: UIViewController {
+class TimelineViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
