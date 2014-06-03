@@ -21,12 +21,11 @@ class TimelineViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func pressComposeButton(sender : UIButton) {
+    @IBAction func pressComposeButton() {
         if(TWTweetComposeViewController.canSendTweet()) {
             var composeViewController = TWTweetComposeViewController()
             self.presentModalViewController(composeViewController, animated: true)
         }
     }
-    
 }
 
