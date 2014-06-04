@@ -8,12 +8,23 @@
 
 import UIKit
 import Twitter
+import Accounts
 
 class TimelineViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let handler: ACAccountStoreRequestAccessCompletionHandler = {granted, error in
+            if(!granted) {
+                NSLog("ユーザーがアクセスを拒否しました。")
+            } else {
+                NSLog("ユーザーがアクセスを許可しました。")
+            }
+        }
+        var accountStore = ACAccountStore()
+        var twitterAccountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
+        accountStore.requestAccessToAccountsWithType(twitterAccountType, handler)
     }
     
     override func didReceiveMemoryWarning() {
