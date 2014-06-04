@@ -32,9 +32,15 @@ class TimelineViewController: UITableViewController {
                 let hendler: TWRequestHandler = {responseData, urlRes, error in
                     if(responseData == nil) {
                         NSLog("%@", error)
-                    } else {
-                        NSLog("responseData = %@", responseData)
+                        return
                     }
+                    var error: NSErrorPointer = nil
+                    let statuses : AnyObject! =  NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions.MutableLeaves, error: error)
+                    if(statuses == nil) {
+                        NSLog("\(error)")
+                        return
+                    }
+                    NSLog("\(statuses)")
                 }
                 let request = TWRequest(URL: url, parameters: nil, requestMethod: TWRequestMethod.GET)
                 request.account = account
