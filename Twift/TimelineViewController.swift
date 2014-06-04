@@ -29,17 +29,16 @@ class TimelineViewController: UITableViewController {
             if(twitterAccounts.count > 0){
                 let account = twitterAccounts[0] as ACAccount
                 let url = NSURL.URLWithString("http://api.twitter.com/1/statuses/home_timeline.json")
-//                    let request = TWRequest(URL: url, parameters: nil, requestMethod: TWRequestMethodGET)
-//                    let request = TWRequest(url, nil, TWRequestMethodGET)
-                let request = TWRequest()
-                request.account = account
-                request.performRequestWithHandler({(responseData: NSData!, urlRes: NSHTTPURLResponse!, error: NSError!) in
+                let hendler: TWRequestHandler = {responseData, urlRes, error in
                     if(responseData == nil) {
                         NSLog("%@", error)
                     } else {
                         NSLog("responseData = %@", responseData)
                     }
-                })
+                }
+                let request = TWRequest(URL: url, parameters: nil, requestMethod: TWRequestMethod.GET)
+                request.account = account
+                request.performRequestWithHandler(hendler)
             }
         }
         accountStore.requestAccessToAccountsWithType(twitterAccountType, handler)
