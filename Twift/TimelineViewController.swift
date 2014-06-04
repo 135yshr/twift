@@ -12,9 +12,6 @@ import Accounts
 
 class TimelineViewController: UITableViewController {
     var statuses: AnyObject!
-    init(style: UITableViewStyle) {
-        super.init(style: style)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
