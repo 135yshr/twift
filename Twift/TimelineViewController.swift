@@ -20,13 +20,26 @@ class TimelineViewController: UITableViewController {
         let handler: ACAccountStoreRequestAccessCompletionHandler = {granted, error in
             if(!granted) {
                 NSLog("ユーザーがアクセスを拒否しました。")
-            } else {
-                let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
-                NSLog("twitterAccounts = %@", twitterAccounts)
-                if(twitterAccounts.count>0){
-                    let account = twitterAccounts[0] as ACAccount
-                    NSLog("account = %@", account)
-                }
+                return
+            }
+
+            
+            let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
+            NSLog("twitterAccounts = %@", twitterAccounts)
+            if(twitterAccounts.count > 0){
+                let account = twitterAccounts[0] as ACAccount
+                let url = NSURL.URLWithString("http://api.twitter.com/1/statuses/home_timeline.json")
+//                    let request = TWRequest(URL: url, parameters: nil, requestMethod: TWRequestMethodGET)
+//                    let request = TWRequest(url, nil, TWRequestMethodGET)
+                let request = TWRequest()
+                request.account = account
+                request.performRequestWithHandler({(responseData: NSData!, urlRes: NSHTTPURLResponse!, error: NSError!) in
+                    if(responseData == nil) {
+                        NSLog("%@", error)
+                    } else {
+                        NSLog("responseData = %@", responseData)
+                    }
+                })
             }
         }
         accountStore.requestAccessToAccountsWithType(twitterAccountType, handler)
