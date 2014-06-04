@@ -13,7 +13,10 @@
 		A91582F0193E6F5D007329EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91582EF193E6F5D007329EB /* Images.xcassets */; };
 		A91582FC193E6F5D007329EB /* TwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91582FB193E6F5D007329EB /* TwiftTests.swift */; };
 		A9158306193E75B3007329EB /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9158305193E75B3007329EB /* TimelineViewController.swift */; };
-		A9158308193E7BF7007329EB /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9158307193E7BF7007329EB /* Twitter.framework */; };
+		A915830A193E8AF1007329EB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9158309193E8AF1007329EB /* Accounts.framework */; };
+		A94679B8193F02C70013EB18 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A94679B7193F02C70013EB18 /* Twitter.framework */; };
+		A9A3F1BF193EFF8A00A301C3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A3F1BE193EFF8A00A301C3 /* Social.framework */; };
+		A9D7A4F1193F07B000322B47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D7A4F0193F07B000322B47 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,10 @@
 		A91582FA193E6F5D007329EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A91582FB193E6F5D007329EB /* TwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwiftTests.swift; sourceTree = "<group>"; };
 		A9158305193E75B3007329EB /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
-		A9158307193E7BF7007329EB /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		A9158309193E8AF1007329EB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		A94679B7193F02C70013EB18 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		A9A3F1BE193EFF8A00A301C3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A9D7A4F0193F07B000322B47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +51,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9158308193E7BF7007329EB /* Twitter.framework in Frameworks */,
+				A9D7A4F1193F07B000322B47 /* Foundation.framework in Frameworks */,
+				A94679B8193F02C70013EB18 /* Twitter.framework in Frameworks */,
+				A9A3F1BF193EFF8A00A301C3 /* Social.framework in Frameworks */,
+				A915830A193E8AF1007329EB /* Accounts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +71,10 @@
 		A91582DA193E6F5D007329EB = {
 			isa = PBXGroup;
 			children = (
-				A9158307193E7BF7007329EB /* Twitter.framework */,
+				A9D7A4F0193F07B000322B47 /* Foundation.framework */,
+				A94679B7193F02C70013EB18 /* Twitter.framework */,
+				A9A3F1BE193EFF8A00A301C3 /* Social.framework */,
+				A9158309193E8AF1007329EB /* Accounts.framework */,
 				A91582E5193E6F5D007329EB /* Twift */,
 				A91582F8193E6F5D007329EB /* TwiftTests */,
 				A91582E4193E6F5D007329EB /* Products */,
@@ -414,6 +426,7 @@
 				A9158301193E6F5D007329EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9158302193E6F5D007329EB /* Build configuration list for PBXNativeTarget "TwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +435,7 @@
 				A9158304193E6F5D007329EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
