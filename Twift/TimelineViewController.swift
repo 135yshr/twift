@@ -15,15 +15,20 @@ class TimelineViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let accountStore = ACAccountStore()
+        let twitterAccountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
         let handler: ACAccountStoreRequestAccessCompletionHandler = {granted, error in
             if(!granted) {
                 NSLog("ユーザーがアクセスを拒否しました。")
             } else {
-                NSLog("ユーザーがアクセスを許可しました。")
+                let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
+                NSLog("twitterAccounts = %@", twitterAccounts)
+                if(twitterAccounts.count>0){
+                    let account = twitterAccounts[0] as ACAccount
+                    NSLog("account = %@", account)
+                }
             }
         }
-        var accountStore = ACAccountStore()
-        var twitterAccountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
         accountStore.requestAccessToAccountsWithType(twitterAccountType, handler)
     }
     
@@ -34,7 +39,7 @@ class TimelineViewController: UITableViewController {
     
     @IBAction func pressComposeButton() {
         if(TWTweetComposeViewController.canSendTweet()) {
-            var composeViewController = TWTweetComposeViewController()
+            let composeViewController = TWTweetComposeViewController()
             self.presentModalViewController(composeViewController, animated: true)
         }
     }
