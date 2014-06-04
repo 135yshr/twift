@@ -56,6 +56,10 @@ class TimelineViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
     @IBAction func pressComposeButton() {
         if(TWTweetComposeViewController.canSendTweet()) {
             let composeViewController = TWTweetComposeViewController()
