@@ -13,8 +13,8 @@
 		A91582F0193E6F5D007329EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91582EF193E6F5D007329EB /* Images.xcassets */; };
 		A91582FC193E6F5D007329EB /* TwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91582FB193E6F5D007329EB /* TwiftTests.swift */; };
 		A9158306193E75B3007329EB /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9158305193E75B3007329EB /* TimelineViewController.swift */; };
-		A9158308193E7BF7007329EB /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9158307193E7BF7007329EB /* Twitter.framework */; };
 		A915830A193E8AF1007329EB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9158309193E8AF1007329EB /* Accounts.framework */; };
+		A9A3F1BF193EFF8A00A301C3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A3F1BE193EFF8A00A301C3 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +40,7 @@
 		A9158305193E75B3007329EB /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		A9158307193E7BF7007329EB /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		A9158309193E8AF1007329EB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		A9A3F1BE193EFF8A00A301C3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,8 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A3F1BF193EFF8A00A301C3 /* Social.framework in Frameworks */,
 				A915830A193E8AF1007329EB /* Accounts.framework in Frameworks */,
-				A9158308193E7BF7007329EB /* Twitter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +66,7 @@
 		A91582DA193E6F5D007329EB = {
 			isa = PBXGroup;
 			children = (
+				A9A3F1BE193EFF8A00A301C3 /* Social.framework */,
 				A9158309193E8AF1007329EB /* Accounts.framework */,
 				A9158307193E7BF7007329EB /* Twitter.framework */,
 				A91582E5193E6F5D007329EB /* Twift */,
