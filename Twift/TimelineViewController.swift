@@ -11,6 +11,10 @@ import Twitter
 import Accounts
 
 class TimelineViewController: UITableViewController {
+    var statuses: AnyObject!
+    init(style: UITableViewStyle) {
+        super.init(style: style)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +39,12 @@ class TimelineViewController: UITableViewController {
                         return
                     }
                     var error: NSErrorPointer = nil
-                    let statuses : AnyObject! =  NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions.MutableLeaves, error: error)
-                    if(statuses == nil) {
+                    self.statuses  =  NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions.MutableLeaves, error: error)
+                    if(self.statuses == nil) {
                         NSLog("\(error)")
                         return
                     }
-                    NSLog("\(statuses)")
+                    NSLog("\(self.statuses)")
                 }
                 let request = TWRequest(URL: url, parameters: nil, requestMethod: TWRequestMethod.GET)
                 request.account = account
