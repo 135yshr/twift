@@ -11,6 +11,7 @@ import Twitter
 import Accounts
 
 class TimelineViewController: UITableViewController {
+    
     var statuses: AnyObject!
     
     override func viewDidLoad() {
@@ -58,6 +59,13 @@ class TimelineViewController: UITableViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
+    }
+    
+    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int  {
+        if(self.statuses == nil) {
+            return 0
+        }
+        return self.statuses.count
     }
     
     @IBAction func pressComposeButton() {
