@@ -25,7 +25,6 @@ class TimelineViewController: UITableViewController {
                 return
             }
 
-            
             let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
             NSLog("twitterAccounts = %@", twitterAccounts)
             if(twitterAccounts.count > 0){
@@ -37,7 +36,9 @@ class TimelineViewController: UITableViewController {
                         return
                     }
                     var error: NSErrorPointer = nil
-                    self.statuses  =  NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions.MutableLeaves, error: error)
+                    self.statuses  =
+                        NSJSONSerialization.JSONObjectWithData(responseData,
+                            options: NSJSONReadingOptions.MutableLeaves, error: error)
                     if(self.statuses == nil) {
                         NSLog("\(error)")
                         return
@@ -68,6 +69,23 @@ class TimelineViewController: UITableViewController {
         return self.statuses.count
     }
     
+    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let CellIdentifier = "Cell"
+        var cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as UITableViewCell
+
+        if(cell == nil) {
+            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
+            cell.textLabel.font = UIFont.systemFontOfSize(11.0)
+        }
+
+        let statuses = self.statuses as NSArray
+        let status: NSDictionary! = statuses[indexPath.row] as NSDictionary!
+        let text = status.objectForKey("text") as String
+        cell.textLabel.text = text
+
+        return cell
+    }
+
     @IBAction func pressComposeButton() {
         if(TWTweetComposeViewController.canSendTweet()) {
             let composeViewController = TWTweetComposeViewController()
