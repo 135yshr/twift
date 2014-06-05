@@ -43,6 +43,7 @@ class TimelineViewController: UITableViewController {
                         NSLog("\(error)")
                         return
                     }
+                    dispatch_async(dispatch_get_main_queue(), {self.tableView.reloadData()})
                     NSLog("\(self.statuses)")
                 }
                 let request = TWRequest(URL: url, parameters: nil, requestMethod: TWRequestMethod.GET)
@@ -63,20 +64,13 @@ class TimelineViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int  {
-        if(statuses == nil) {
-            return 0
-        }
         return statuses.count
     }
 
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         let CellIdentifier = "Cell"
-        var cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as UITableViewCell
-
-        if(cell == nil) {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
-            cell.textLabel.font = UIFont.systemFontOfSize(11.0)
-        }
+        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
+        cell.textLabel.font = UIFont.systemFontOfSize(11.0)
 
         let status: NSDictionary! = statuses[indexPath.row] as NSDictionary!
         let text = status.objectForKey("text") as String
