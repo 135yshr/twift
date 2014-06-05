@@ -31,7 +31,7 @@ class TimelineViewController: UITableViewController {
                 let url = NSURL.URLWithString("https://api.twitter.com/1/statuses/home_timeline.json")
                 let hendler: TWRequestHandler = {responseData, urlRes, error in
                     if(responseData == nil) {
-                        NSLog("%@", error)
+                        NSLog("\(error)")
                         return
                     }
                     var error: NSErrorPointer = nil
@@ -64,7 +64,9 @@ class TimelineViewController: UITableViewController {
         return statuses.count
     }
 
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!)
+        -> UITableViewCell! {
+            
         let CellIdentifier = "Cell"
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
         cell.textLabel.font = UIFont.systemFontOfSize(11.0)
