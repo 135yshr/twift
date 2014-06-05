@@ -3,7 +3,7 @@
 //  Twift
 //
 //  Created by 135yshr on 2014/06/04.
-//  Copyright (c) 2014年 135yshr. All rights reserved.
+//  Copyright (c) 2014 135yshr. All rights reserved.
 //
 
 import UIKit
@@ -16,7 +16,7 @@ class TimelineViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
         let accountStore = ACAccountStore()
         let twitterAccountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
         let handler: ACAccountStoreRequestAccessCompletionHandler = {granted, error in
@@ -26,13 +26,12 @@ class TimelineViewController: UITableViewController {
             }
 
             let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
-            NSLog("twitterAccounts = %@", twitterAccounts)
             if(twitterAccounts.count > 0){
                 let account = twitterAccounts[0] as ACAccount
                 let url = NSURL.URLWithString("https://api.twitter.com/1/statuses/home_timeline.json")
                 let hendler: TWRequestHandler = {responseData, urlRes, error in
                     if(responseData == nil) {
-                        NSLog("%@", error)
+                        NSLog("\(error)")
                         return
                     }
                     var error: NSErrorPointer = nil
@@ -44,7 +43,6 @@ class TimelineViewController: UITableViewController {
                         return
                     }
                     dispatch_async(dispatch_get_main_queue(), {self.tableView.reloadData()})
-                    NSLog("\(self.statuses)")
                 }
                 let request = TWRequest(URL: url, parameters: nil, requestMethod: TWRequestMethod.GET)
                 request.account = account
@@ -56,7 +54,6 @@ class TimelineViewController: UITableViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -67,7 +64,9 @@ class TimelineViewController: UITableViewController {
         return statuses.count
     }
 
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!)
+        -> UITableViewCell! {
+            
         let CellIdentifier = "Cell"
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
         cell.textLabel.font = UIFont.systemFontOfSize(11.0)
