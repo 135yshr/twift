@@ -12,7 +12,7 @@ import Accounts
 
 class TimelineViewController: UITableViewController {
     
-    var statuses: AnyObject!
+    var statuses = NSArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class TimelineViewController: UITableViewController {
             NSLog("twitterAccounts = %@", twitterAccounts)
             if(twitterAccounts.count > 0){
                 let account = twitterAccounts[0] as ACAccount
-                let url = NSURL.URLWithString("http://api.twitter.com/1/statuses/home_timeline.json")
+                let url = NSURL.URLWithString("https://api.twitter.com/1/statuses/home_timeline.json")
                 let hendler: TWRequestHandler = {responseData, urlRes, error in
                     if(responseData == nil) {
                         NSLog("%@", error)
@@ -38,7 +38,7 @@ class TimelineViewController: UITableViewController {
                     var error: NSErrorPointer = nil
                     self.statuses  =
                         NSJSONSerialization.JSONObjectWithData(responseData,
-                            options: NSJSONReadingOptions.MutableLeaves, error: error)
+                            options: NSJSONReadingOptions.MutableLeaves, error: error) as NSArray
                     if(self.statuses == nil) {
                         NSLog("\(error)")
                         return
@@ -63,10 +63,10 @@ class TimelineViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int  {
-        if(self.statuses == nil) {
+        if(statuses == nil) {
             return 0
         }
-        return self.statuses.count
+        return statuses.count
     }
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -78,7 +78,7 @@ class TimelineViewController: UITableViewController {
             cell.textLabel.font = UIFont.systemFontOfSize(11.0)
         }
 
-        let statuses = self.statuses as NSArray
+//        let statuses = self.statuses as NSArray
         let status: NSDictionary! = statuses[indexPath.row] as NSDictionary!
         let text = status.objectForKey("text") as String
         cell.textLabel.text = text
