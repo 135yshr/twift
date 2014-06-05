@@ -68,8 +68,8 @@ class TimelineViewController: UITableViewController {
         }
         return statuses.count
     }
-    
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         let CellIdentifier = "Cell"
         var cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as UITableViewCell
 
@@ -78,7 +78,6 @@ class TimelineViewController: UITableViewController {
             cell.textLabel.font = UIFont.systemFontOfSize(11.0)
         }
 
-//        let statuses = self.statuses as NSArray
         let status: NSDictionary! = statuses[indexPath.row] as NSDictionary!
         let text = status.objectForKey("text") as String
         cell.textLabel.text = text
