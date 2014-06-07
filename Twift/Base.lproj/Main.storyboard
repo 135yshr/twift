@@ -27,15 +27,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="aoh-9N-vkX">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="08C-CK-HlE">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xHe-5D-gMM">
-                                <rect key="frame" x="442" y="11" width="16" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="tweet"/>
-                                <connections>
-                                    <action selector="pressComposeButton" destination="WwH-tf-H0N" eventType="touchUpInside" id="8Hf-QM-nh1"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="763-He-2ZN">
+                            <connections>
+                                <action selector="pressComposeButton" destination="WwH-tf-H0N" id="2j5-HY-Uon"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
