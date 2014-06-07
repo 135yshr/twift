@@ -6,5 +6,5 @@ _This application is to display the timeline of Twitter._
 作成中に困ったことは、[Qiita](http://qiita.com/135yshr/items/54a999b334f50f1709d5)にまとめました。
 
 ## 変更履歴
-1.1 ツイートボタンを文字からアイコンに変更
+1.1 ツイートボタンを文字からアイコンに変更  
 1.0 release
